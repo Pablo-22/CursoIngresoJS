@@ -12,10 +12,14 @@ function SacarResto() {
     let divisor;
     let resto;
     
-    dividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
-    divisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);
+    dividendo = document.getElementById("txtIdNumeroDividendo").value;
+    divisor = document.getElementById("txtIdNumeroDivisor").value;
+    
+    dividendo = parseInt(dividendo);
+    divisor = parseInt(divisor);
 
     resto = dividendo % divisor;
 
-    alert(`El módulo es ${resto}`);
+    respuesta = "El resto es " + resto;
+    alert(respuesta);
 }

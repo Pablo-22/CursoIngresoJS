@@ -6,17 +6,19 @@ Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 
-function sumar() {
-    
-    
-    let numero1, numero2;
+function sumar() 
+{ 
+    let numeroUno;
+    let numeroDos;
     let resultado;
     
-    numero1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-    numero2 = parseInt(document.getElementById("txtIdNumeroDos").value);
+    numeroUno = document.getElementById("txtIdNumeroUno").value;
+    numeroDos = document.getElementById("txtIdNumeroDos").value;
     
+    numeroUno = parseInt(numeroUno);
+    numeroDos = parseInt(numeroDos);
     
-    resultado = numero1 + numero2;
+    resultado = numeroUno + numeroDos;
     
     alert("La suma es " + resultado);
     
