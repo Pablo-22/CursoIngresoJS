@@ -4,7 +4,8 @@ function mostrar()
     const maximo = 10;
     const minimo = 1;
     
-    numeroAleatorio = Math.round(Math.random() * (maximo - minimo) + minimo );
+    numeroAleatorio = Math.random() * (maximo - minimo) + minimo;
+    numeroAleatorio = Math.round( numeroAleatorio );
     
     alert(numeroAleatorio);
 
