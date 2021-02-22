@@ -1,13 +1,26 @@
+/*
+Córdoba Pablo
+jsIteracionesWhile-06
+*/
+
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var numeroIngresado;
+	let contador;
+	let acumulador;
+	let numeroIngresado;
 
-	contador=0;
-	acumulador=0;
+	contador= 0;
+	acumulador= 0;
 	
+    do {
+        numeroIngresado = prompt("Ingrese un número");
+        numeroIngresado = parseInt(numeroIngresado);
+        
+        acumulador += numeroIngresado;
+        contador++;
+        
+    } while (contador < 5);
 	
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/5;
+	document.getElementById("txtIdSuma").value=acumulador;
+	document.getElementById("txtIdPromedio").value=acumulador/5;
 }//FIN DE LA FUNCIÓN

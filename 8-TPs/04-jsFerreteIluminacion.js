@@ -34,8 +34,75 @@ function CalcularPrecio ()
     let ingresosBrutos;
     ingresosBrutos = 0.10;
     
-    if (cantidadDeLamparas > 5)
+    switch(cantidadDeLamparas){
+        case 5:
+            if(marca == "ArgentinaLuz")
+            {
+                descuento = 0.40; 
+            }
+            else 
+            {
+                descuento = 0.30;
+            }
+        break;
+            
+        case 4:
+            if (marca == "ArgentinaLuz" || "FelipeLamparas")
+            {
+                descuento = 0.15;
+            }
+            else
+            {
+                descuento = 0.20;
+            }
+        break;
+            
+        case 3:
+            if (marca == "ArgentinaLuz")
+            {
+                descuento = 0.15; 
+            }
+            else
+            {
+                if (marca == "FelipeLamparas")
+                {
+                    descuento = 0.10;
+                }
+                else
+                {
+                   descuento = 0.5; 
+                }
+            }
+        break;
+            
+        case 2:
+        case 1:
+            descuento = 0;
+        break;
+            
+        default:
+            descuento = 0.50;
+        break;
+    } 
+    
+    precio = precio - (precio * descuento);
+    
+    if (precio > 120)
     {
+        ingresosBrutos = precio * ingresosBrutos;
+        alert("Usted pago " + ingresosBrutos +  " de IIBB.");
+        precio = precio + ingresosBrutos;
+    }
+        
+        
+    document.getElementById("txtIdprecioDescuento").value = precio;
+}
+
+
+/* 
+
+switch (cantidadDeLamparas){
+        case(5) 
         descuento = 0.50;
     }
     else
@@ -81,17 +148,6 @@ function CalcularPrecio ()
                 }
             }
         }
-    }  
+    } 
     
-    precio = precio - (precio * descuento);
-    
-    if (precio > 120)
-    {
-        ingresosBrutos = precio * ingresosBrutos;
-        alert("Usted pago " + ingresosBrutos +  " de IIBB.");
-        precio = precio + ingresosBrutos;
-    }
-        
-        
-    document.getElementById("txtIdprecioDescuento").value = precio;
-}
+*/

@@ -1,3 +1,10 @@
+/*
+
+Córdoba Pablo
+jsInstrucciónSwitch-09
+
+*/
+
 function mostrar()
 {
 	let estacionIngresada;
@@ -9,8 +16,7 @@ function mostrar()
     let precioBase;
     precioBase = 15000;
     
-    let aumento = 0;
-    let descuento = 0;
+    let modificacionDePrecio = 0;
     
     let precioFinal;
     
@@ -19,17 +25,18 @@ function mostrar()
         case "Invierno":
             switch (destinoIngresado){
                 case "Bariloche":
-                    aumento = 0.20;
+                    modificacionDePrecio = 0.20;
                 break;
                     
                  
                 case "Mar del plata":
-                    descuento = 0.20;
+                    modificacionDePrecio = -0.20;
                 break;
                     
                  
                 default:
-                    descuento = 0.10;
+                    modificacionDePrecio = -0.10;
+                break;
             }
             
             
@@ -39,28 +46,30 @@ function mostrar()
         case "Verano":
             switch (destinoIngresado){
                 case "Bariloche":
-                    descuento = 0.20;
+                    modificacionDePrecio = -0.20;
                 break;
                     
                  
                 case "Mar del plata":
-                    aumento = 0.20;
+                    modificacionDePrecio = 0.20;
                 break;
                     
                  
                 default:
-                    aumento = 0.10;
+                    modificacionDePrecio = 0.10;
+                break;
             }
         break;
             
             
         default:
-            aumento = 0.10;
+            modificacionDePrecio = 0.10;
+        break;
 
         
     }
     
-    precioFinal = precioBase + precioBase * aumento - precioBase * descuento;
+    precioFinal = precioBase + precioBase * modificacionDePrecio;
     
     alert("El precio final de su viaje será de $" + precioFinal);
 	
