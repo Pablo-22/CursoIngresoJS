@@ -8,7 +8,7 @@ sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
 
-    let respuesta = 0;
+    let respuesta = "";
     let positivos = 0;
     let negativos = 1;
     

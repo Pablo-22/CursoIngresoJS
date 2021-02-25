@@ -6,7 +6,7 @@ function mostrar()
 {
     let acumulador = 0;
     let contador = 0;
-    let respuesta = 0;
+    let respuesta = "";
     
     respuesta = prompt("Ingrese un número");
  
